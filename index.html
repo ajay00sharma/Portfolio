@@ -1,146 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-    <nav id="desktop-nav">
-        <div class="logo">
-            <a href="index.html">Ajay Sharma</a>
-        </div>
-        <div class="nav-container">
-            <ul class="nav-link">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Portfolio</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style2.css" />
+	</head>
+	<body>
+		<nav id="desktop-nav">
+			<div class="logo">
+				<a href="index.html">Ajay Sharma</a>
+			</div>
+			<div class="nav-container">
+				<ul class="nav-link">
+					<li><a href="#about">About</a></li>
+					<li><a href="#projects">Project</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li><button id="l-d" onclick="lighttodark()">Light</button></li>
+					<li><label class="switch"><input type="checkbox" id="themeSwitcher">
+						<span class="slider"></span>
+						</label>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <!-- New nav for small screen -->
-    <nav id="small-nav">
-        <div class="logo">
-            <a href="index.html">Ajay Sharma</a>
-        </div>
-        <div class="small-menu">
-          <div class="hamburger-icon" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          </div>
-        </div>
-      </nav>
-<!--PROFILE SECTION -->
-<section id="profile">
-  <div class="section__pic-container">
-    <img src="./Resource/mf-avatar.svg" alt="Profile picture" />
-  </div>
-  <div class="section__text">
-    <p class="section__text__p1">Hello, I'm</p>
-    <h1 class="title">Ajay Sharma</h1>
-    <p class="section__text__p2">Web Developer</p>
-    <div class="btn-container">
-      <button
-        class="btn btn-color-2" onclick="window.open('./Resource/Ajay Sharma Resume.pdf')">
-        Download CV
-      </button>
-    </div>
-    <div id="socials-container">
-      <img
-        src="./Resource/linkedin.png"
-        alt="My LinkedIn profile"
-        class="icon"
-        onclick="location.href='https://www.linkedin.com/in/ajay00sharma'"/>
-      <img
-        src="./Resource/github.png"
-        alt="My Github profile"
-        class="icon"
-        onclick="location.href='https://github.com/ajay00sharma'"/>
-    </div>
-    </section>
-    <!-- About Section -->
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">ABOUT ME</span>
-          <span class="heading-sec__sub">
-            Here something more information about me, what I do, and my
-            current skills mostly in terms of programming and technology
-          </span>
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                I'm a <strong>Frontend Web Developer</strong> building
-                and managing the Front-end of Websites that
-                leads to the success of the overall product. Check out some of
-                my work in the <strong>Projects</strong> section.
-              </p>
-              <p class="about__content-details-para">
-                I also like sharing content related to the stuff that I have
-                learned over the years in <strong>Web Development</strong> so it
-                can help other people of the Dev Community. Feel free to Connect
-                or Follow me on my
-                <a
-                  rel="noreferrer"
-                  href="https://linkedin.com/in/rammcodes"
-                  target="_blank"
-                  >Linkedin</a
-                >
-                and
-                <a
-                  rel="noreferrer"
-                  href="https://instagram.com/rammcodes_"
-                  target="_blank"
-                  >Instagram</a
-                >
-                where I post useful content related to Web Development and
-                Programming
-              </p>
-              <p class="about__content-details-para">
-                I'm open to <strong>Job</strong> opportunities where I can
-                contribute, learn and grow. If you have a good opportunity that
-                matches my skills and experience then don't hesitate to
-                <strong>contact</strong> me.
-              </p>
-            </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
-            >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">HTML</div>
-              <div class="skills__skill">CSS</div>
-              <div class="skills__skill">JavaScript</div>
-              <div class="skills__skill">C++</div>
-              <div class="skills__skill">Java</div>
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">Github</div>
-              <div class="skills__skill">Responsive Design</div>
-              <div class="skills__skill">SEO</div>
-              <div class="skills__skill"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- New nav for small screen -->
+		<nav id="small-nav">
+			<div class="logo">
+				<a href="index.html">Ajay Sharma</a>
+			</div>
+			<div class="small-menu">
+				<div class="hamburger-icon" onclick="toggleMenu()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="menu-links">
+					<li><a href="#about" onclick="toggleMenu()">About</a></li>
+					<li><a href="#projects" onclick="toggleMenu()">Project</a></li>
+					<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+					<li><button id="l-d-s" onclick="lighttodark()">Light</button></li>
+					<li><label class="switch"><input type="checkbox" id="themeSwitcher">
+						<span class="slider"></span>
+						</label>
+					</li>
+				</div>
+			</div>
+		</nav>
 
-    <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+		<!--PROFILE SECTION -->
+		<section id="profile">
+			<div class="section__text">
+				<p class="section__text__p1">Hello, I'm</p>
+				<h1 class="title">Ajay Sharma</h1>
+				<p class="section__text__p2">a Web Developer</p>
+				<button	id="Button" onclick="window.open('./Resource/Ajay Sharma Resume.pdf')">
+				Download CV
+				</button>
+				<div id="socials-container">
+					<img
+						src="./Resource/linkedin.png"
+						alt="My LinkedIn profile"
+						class="icon"
+						onclick="location.href='https://www.linkedin.com/in/ajay00sharma'"
+					/>
+					<img
+						src="./Resource/github.png"
+						alt="My Github profile"
+						class="icon"
+						onclick="location.href='https://github.com/ajay00sharma'"
+					/>
+				</div>
+			</div>
+			<div class="section__pic-container">
+				<img src="./Resource/mf-avatar.svg" alt="Profile picture" />
+			</div>
+		</section>
+		<!-- About Section -->
+		<section id="about" class="about sec-pad">
+			<div class="main-container">
+				<h2 class="heading heading-sec heading-sec__mb-med">
+					<span class="heading-sec__main">ABOUT ME</span>
+					<span class="heading-sec__sub">
+						Here something more information about me, what I do, and my current
+						skills mostly in terms of programming and technology
+					</span>
+				</h2>
+				<div class="about__content">
+					<div class="about__content-main">
+						<h3 class="about__content-title">Get to know me!</h3>
+						<div class="about__content-details">
+							<p class="about__content-details-para">
+								I'm a <strong>Frontend Web Developer</strong> building and
+								managing the Front-end of Websites that leads to the success of
+								the overall product. Check out some of my work in the
+								<strong>Projects</strong> section.
+							</p>
+							<p class="about__content-details-para">
+								I also like sharing content related to the stuff that I have
+								learned over the years in <strong>Web Development</strong> so it
+								can help other people of the Dev Community. Feel free to Connect
+								or Follow me on my
+								<a
+									rel="noreferrer"
+									href="https://www.linkedin.com/in/ajay00sharma/"
+									target="_blank"
+									>Linkedin</a
+								>
+								and
+								<a
+									rel="noreferrer"
+									href="https://instagram.com/rammcodes_"
+									target="_blank"
+									>Instagram</a
+								>
+								where I post useful content related to Web Development and
+								Programming
+							</p>
+							<p class="about__content-details-para">
+								I'm open to <strong>Job</strong> opportunities where I can
+								contribute, learn and grow. If you have a good opportunity that
+								matches my skills and experience then don't hesitate to
+								<strong>contact</strong> me.
+							</p>
+						</div>
+						<a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
+							>Contact</a
+						>
+					</div>
+					<div class="about__content-skills">
+						<h3 class="about__content-title">My Skills</h3>
+						<div class="skills">
+							<div class="skills__skill">HTML</div>
+							<div class="skills__skill">CSS</div>
+							<div class="skills__skill">JavaScript</div>
+							<div class="skills__skill">C++</div>
+							<div class="skills__skill">Java</div>
+							<div class="skills__skill">Python</div>
+							<div class="skills__skill">GIT</div>
+							<div class="skills__skill">GitHub</div>
+							<div class="skills__skill">SEO</div>
+							<div class="skills__skill">Responsive Design</div>
+						</div>
+					</div>
+					<div class="about__content-skills">
+						<h3 class="about__content-title">Soft Skills</h3>
+						<div class="skills">
+							<div class="skills__skill">Communication</div>
+							<div class="skills__skill">Teamwork</div>
+							<div class="skills__skill">Problem-solving</div>
+							<div class="skills__skill">Adaptability</div>
+							<div class="skills__skill">Critical Thinking</div>
+							<div class="skills__skill">Time Management</div>
+							<div class="skills__skill">Leadership</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROJECTS -->
+
+		<section id="projects">
+			<p class="section__text__p1">Browse My Recent</p>
+			<h1 class="title">Projects</h1>
+			<div class="experience-details-container">
+				<div class="about-containers">
+
+					<!-- Visible card-->
+					<div class="card">
+						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
+						<div class="card__content">
+							<p class="card__title">Project Name</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco.
+							</p>
+							<button class="card__button">Live Demo</button>
+							<button class="card__button secondary">Source Code</button>
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
+						<div class="card__content">
+							<p class="card__title">Project Name</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco.
+							</p>
+							<button class="card__button">Live Demo</button>
+							<button class="card__button secondary">Source Code</button>
+						</div>
+					</div>
+
+					<div class="card">
+						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
+						<div class="card__content">
+							<p class="card__title">Project Name</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco.
+							</p>
+							<button class="card__button">Live Demo</button>
+							<button class="card__button secondary">Source Code</button>
+						</div>
+					</div>
+
+					<!-- Hoden cards add more hidden cards as needed -->
+
+					<div class="card hidden-card">
+						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
+						<div class="card__content">
+							<p class="card__title">Project Name</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco.
+							</p>
+							<button class="card__button">Live Demo</button>
+							<button class="card__button secondary">Source Code</button>
+						</div>
+					</div>
+
+					<div class="card hidden-card">
+						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
+						<div class="card__content">
+							<p class="card__title">Project Name</p>
+							<p class="card__description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco.
+							</p>
+							<button class="card__button">Live Demo</button>
+							<button class="card__button secondary">Source Code</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button
+				class="btn btn-color-2 show-more-btn"
+				onclick="showMoreProjects()"
+			>
+				Show More
+			</button>
+		</section>
+
+		<!-- Contcts -->
+
+		<section id="contact">
+			<p class="section__text__p1">Get in Touch</p>
+			<h1 class="title">Contact Me</h1>
+			<div class="contact-info-upper-container">
+				<div class="contact-info-container">
+					<img
+						src="./Resource/email.png"
+						alt="Email icon"
+						class="icon contact-icon email-icon"
+					/>
+					<p>
+						<a href="mailto:	sharma.ajay.6004@gmail.com"
+							>sharma.ajay.6004@gmail.com</a
+						>
+					</p>
+				</div>
+				<div class="contact-info-container">
+					<img
+						src="./Resource/linkedin.png"
+						alt="LinkedIn icon"
+						class="icon contact-icon"
+					/>
+					<p>
+						<a href="https://www.linkedin.com/in/ajay00sharma/">LinkedIn</a>
+					</p>
+				</div>
+			</div>
+		</section>
+	</body>
 </html>
