@@ -7,18 +7,36 @@ function toggleMenu() {
 
 
 function lighttodark(button) {
-  if (button.innerText === "Light") {
-      button.innerText = "Dark";
-  } else {
-      button.innerText = "Light";
-  }
+  button.style.display = "none";
+  document.querySelector(".switch").style.display = 'block';
+
+  setTimeout(function() {
+      button.style.display = "block";
+      document.querySelector(".switch").style.display = 'none';
+      
+      if (button.innerText === "Light") {
+          button.innerText = "Dark";
+      } else {
+          button.innerText = "Light";
+      }
+  }, 900);
 }
+
 document.getElementById("l-d").addEventListener("click", function() {
   lighttodark(this);
+
+  setTimeout(function() {
+      var themeSwitcher = document.getElementById("themeSwitcher");
+      themeSwitcher.click();
+  }, 200);
 });
 
 document.getElementById("l-d-s").addEventListener("click", function() {
   lighttodark(this);
+  setTimeout(function() {
+      var sthemeSwitcher = document.getElementById("sthemeSwitcher");
+      sthemeSwitcher.click();
+  }, 200);
 });
 
 // Show more card

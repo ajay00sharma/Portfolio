@@ -3,6 +3,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	background-color: #f5f5f5;
 }
 
@@ -64,10 +65,6 @@ nav {
 		display: flex;
 	}
 	nav {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		height: 15vh;
 		padding: 0 70px;
 	}
 }
@@ -240,7 +237,7 @@ nav {
 #profile {
 	display: flex;
 	justify-content: center;
-	gap: 5rem;
+	gap: 12rem;
 	height: 80vh;
   }
   
@@ -370,4 +367,10 @@ nav {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .details-container {
+        flex: 1 1 100%;
+    }
 }

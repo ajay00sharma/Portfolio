@@ -7,6 +7,7 @@
 		<title>Portfolio</title>
 		<link rel="stylesheet" href="style.css" />
 		<link rel="stylesheet" href="style2.css" />
+		<!-- <link rel="stylesheet" href="mediaqueries.css"/> -->
 	</head>
 	<body>
 		<nav id="desktop-nav">
@@ -43,7 +44,7 @@
 					<li><a href="#projects" onclick="toggleMenu()">Project</a></li>
 					<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
 					<li><button id="l-d-s" onclick="lighttodark()">Light</button></li>
-					<li><label class="switch"><input type="checkbox" id="themeSwitcher">
+					<li><label class="switch"><input type="checkbox" id="sthemeSwitcher">
 						<span class="slider"></span>
 						</label>
 					</li>
@@ -59,7 +60,7 @@
 				<h1 class="title">Ajay Sharma</h1>
 				<p class="section__text__p2">a Web Developer</p>
 				<button	id="Button" onclick="window.open('./Resource/Ajay Sharma Resume.pdf')">
-				Download CV
+				<span id="Button-span">Download CV</span>
 				</button>
 				<div id="socials-container">
 					<img
