@@ -98,7 +98,7 @@
   /* The slider */
   .slider {
 	position: absolute;
-	cursor: pointer;
+	cursor: none;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -135,6 +135,15 @@
 
 /* CARDS STYLE */
 
+.about-containers{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	position: relative;
+	gap: 50px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
 .card {
 	position: relative;
 	width: 350px;
@@ -150,6 +159,13 @@
 	perspective: 1000px;
 	box-shadow: 0 0 0 5px #ffffff80;
 	transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Hidden Project section */
+
+/* Add this CSS to hide the cards initially */
+.hidden-card {
+	display: none;
 }
 
 .card__image {

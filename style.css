@@ -384,12 +384,6 @@ nav {
 	}
 }
 
-/* Hidden Project section */
-
-/* Add this CSS to hide the cards initially */
-.hidden-card {
-	display: none;
-}
 
 .experience-details-container {
 	display: flex;
@@ -399,7 +393,7 @@ nav {
 
 .details-container {
 	flex: 1 1 calc(33.33% - 20px); /* Adjust width and gap as needed */
-	/* Other styles */
+	
 }
 
 /* Styling for the show more button */
@@ -419,3 +413,110 @@ nav {
         flex: 1 1 100%;
     }
 }
+
+
+/* Contact */
+
+/* CONTACT */
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250); 
+    margin: 2rem auto;
+    padding: 0.5rem;
+    min-width: 700px; 
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+	margin: 0px 50px;
+}
+
+.contact-info-container p {
+    font-size: larger;
+    margin: 0; /* Remove default margin if necessary */
+}
+
+.contact-info-container a {
+    color: black; 
+    text-decoration: none; 
+}
+
+.contact-info-container a:hover {
+    color: #bbb3b3;
+    text-decoration: underline;
+    text-decoration-color: #000000; 
+	transition: all 0.4s ease-in-out;
+}
+
+.contact-icon {
+    cursor: default;
+}
+
+.email-icon {
+    height: 2.5rem;
+}
+
+  /* FOOTER SECTION */
+  
+  .nav-links {
+	display: flex;
+	list-style: none;
+	font-size: 22px;
+	gap: 30px;
+	justify-content: center; 
+  }
+  
+  .nav-links a {
+	color: black;
+	text-decoration: none;
+	transition: all 0.4s ease;
+  }
+  
+  .nav-links a:hover {
+	color: #bbb3b3;
+	text-decoration: underline;
+	text-decoration-color: #000000;
+  }
+  
+  .nav-links button {
+	color: black;
+	border: none;
+	font-size: 18px;
+	font-family: "Poppins", sans-serif;
+	cursor: default;
+	transition: all 0.4s ease;
+  }
+  
+  .nav-links button:hover {
+	color: #bbb3b3;
+	text-decoration: underline;
+	text-decoration-color: #000000;
+  }
+  
+  footer {
+	height: 26vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center;
+	margin: 0 1rem;
+  }
+  
+  footer p {
+	text-align: center;
+  }
+  
