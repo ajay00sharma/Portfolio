@@ -1,4 +1,4 @@
-alert("The website is under development.");
+// alert("The website is under development.");
 
 function toggleMenu() {
 	const menu = document.querySelector(".menu-links");
@@ -40,34 +40,44 @@ document.getElementById("l-d-s").addEventListener("click", function () {
 	}, 200);
 });
 
+// footer one 
+document.getElementById("l-d-f").addEventListener("click", function () {
+	lighttodark(this);
+
+	setTimeout(function () {
+		var themeSwitcher = document.getElementById("fthemeSwitcher");
+		themeSwitcher.click();
+	}, 200);
+});
+
 // Show more card
 
 function showMoreProjects() {
 	const hiddenCards = document.querySelectorAll(".hidden-card");
-
-	// Select the show more/less button
 	const showMoreButton = document.querySelector(".show-more-btn");
 
-	// Check the current state and toggle visibility
-	if (
-		hiddenCards[0].style.display === "none" ||
-		hiddenCards[0].style.display === ""
-	) {
-		// Show hidden cards
+	if (hiddenCards[0].classList.contains("show-card")) {
+		// Hide the cards with smooth transition
 		hiddenCards.forEach((card) => {
-			card.style.display = "block";
+			card.classList.remove("show-card");
+			setTimeout(() => {
+				card.style.display = "none"; // Set display: none after transition
+			}, 400); // Wait for the transition duration (0.4s)
 		});
-		// Change button text to "Show Less"
-		showMoreButton.textContent = "Show Less";
-	} else {
-		// Hide the cards
-		hiddenCards.forEach((card) => {
-			card.style.display = "none";
-		});
-		// Change button text to "Show More"
 		showMoreButton.textContent = "Show More";
+	} else {
+		// Show the cards with smooth transition
+		hiddenCards.forEach((card) => {
+			card.style.display = "block"; // Make the card visible
+			setTimeout(() => {
+				card.classList.add("show-card"); // Trigger transition
+			}, 10); // Small delay to trigger transition smoothly
+		});
+		showMoreButton.textContent = "Show Less";
 	}
 }
+
+
 
 // animation for the card
 const observer = new IntersectionObserver((entries) => {

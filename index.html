@@ -60,7 +60,7 @@
 				<h1 class="title">Ajay Sharma</h1>
 				<p class="section__text__p2">a Web Developer</p>
 				<button	id="Button" onclick="window.open('./Resource/Ajay Sharma Resume.pdf')">
-				<span id="Button-span">Download CV</span>
+				<span id="Button-span">Download Resume</span>
 				</button>
 				<div id="socials-container">
 					<img
@@ -87,7 +87,7 @@
 				<h2 class="heading heading-sec heading-sec__mb-med">
 					<span class="heading-sec__main">ABOUT ME</span>
 					<span class="heading-sec__sub">
-					Here is some more information about me, what I do, and my current skills mostly in terms of programming and technology.
+					Here is some more information about me, what I do, and my current skills mostly in programming and technology.
 					</span>
 				</h2>
 				<div class="about__content">
@@ -147,47 +147,43 @@
 			<h1 class="title">Projects</h1>
 			<div class="experience-details-container">
 				<div class="about-containers">
-
 					<!-- Visible card-->
 					<div class="card">
 						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
 						<div class="card__content">
-							<p class="card__title">Project Name</p>
+							<p class="card__title">Chat Bot</p>
 							<p class="card__description">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 								enim ad minim veniam, quis nostrud exercitation ullamco.
 							</p>
-							<button class="card__button">Live Demo</button>
-							<button class="card__button secondary">Source Code</button>
+							<a class="card__button" href="https://github.com/ajay00sharma/Fitness-Tracking-App.git" target="_blank">Source Code</a>
 						</div>
 					</div>
 
 					<div class="card">
 						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
 						<div class="card__content">
-							<p class="card__title">Project Name</p>
+							<p class="card__title">Fitness Tracking App</p>
 							<p class="card__description">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 								enim ad minim veniam, quis nostrud exercitation ullamco.
 							</p>
-							<button class="card__button">Live Demo</button>
-							<button class="card__button secondary">Source Code</button>
+							<a class="card__button" href="https://github.com/ajay00sharma/Fitness-Tracking-App.git" target="_blank">Source Code</a>
 						</div>
 					</div>
 
 					<div class="card">
 						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
 						<div class="card__content">
-							<p class="card__title">Project Name</p>
+							<p class="card__title">To-Do-List</p>
 							<p class="card__description">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 								enim ad minim veniam, quis nostrud exercitation ullamco.
 							</p>
-							<button class="card__button">Live Demo</button>
-							<button class="card__button secondary">Source Code</button>
+							<a class="card__button" href="https://github.com/ajay00sharma/Fitness-Tracking-App.git" target="_blank">Source Code</a>
 						</div>
 					</div>
 
@@ -196,36 +192,32 @@
 					<div class="card hidden-card">
 						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
 						<div class="card__content">
-							<p class="card__title">Project Name</p>
+							<p class="card__title">Calculater</p>
 							<p class="card__description">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 								enim ad minim veniam, quis nostrud exercitation ullamco.
 							</p>
-							<button class="card__button">Live Demo</button>
-							<button class="card__button secondary">Source Code</button>
+							<a class="card__button" href="https://github.com/ajay00sharma/Fitness-Tracking-App.git" target="_blank">Source Code</a>
 						</div>
 					</div>
 
 					<div class="card hidden-card">
 						<img src="Resource/Snake Game.jpg" alt="Project Image" class="card__image" />
 						<div class="card__content">
-							<p class="card__title">Project Name</p>
+							<p class="card__title">Banking System</p>
 							<p class="card__description">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 								enim ad minim veniam, quis nostrud exercitation ullamco.
 							</p>
-							<button class="card__button">Live Demo</button>
-							<button class="card__button secondary">Source Code</button>
-						</div>
+							<a class="card__button" href="https://github.com/ajay00sharma/Fitness-Tracking-App.git" target="_blank">Source Code</a>
 					</div>
 				</div>
+				
+				</div>
 			</div>
-			<button
-				class="btn btn-color-2 show-more-btn"
-				onclick="showMoreProjects()"
-			>
+			<button class="btn btn-color-2 show-more-btn" onclick="showMoreProjects()">
 				Show More
 			</button>
 		</section>
@@ -266,15 +258,19 @@
 			  <div class="nav-links-container">
 				<ul class="nav-links">
 				  <li><a href="#about">About</a></li>
-				  <li><a href="#experience">Experience</a></li>
-				  <li><a href="#projects">Projects</a></li>
+				  <li><a href="#projects">Project</a></li>
 				  <li><a href="#contact">Contact</a></li>
+				  <li><button id="l-d-f" onclick="lighttodark()">Light</button></li>
+					<li><label class="switch"><input type="checkbox" id="fthemeSwitcher">
+						<span class="slider"></span>
+						</label>
+					</li>
 				</ul>
 			  </div>
 			</nav>
 			<p>Copyright &#169; 2024 Ajay Sharma. All Rights Reserved.</p>
 		  </footer>
-		  <script src="script.js"></script>
+		  <script defer src="script.js"></script>
 		</body>
 	  </html>
 	</body>
