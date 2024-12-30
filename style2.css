@@ -137,110 +137,109 @@ input:checked + .slider:before {
 /* CARDS STYLE */
 
 .about-containers {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards in a row */
-	position: relative;
-	gap: 30px;
-	margin-top: 50px;
-	margin-left: 55px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ensures 3 cards in a row */
+    position: relative;
+    gap: 30px;
+    margin-top: 50px;
+    margin-left: 55px;
 }
 
 .card {
-	position: relative;
-	width: 400px;
-	aspect-ratio: 16/9;
-	background-color: #f2f2f2;
-	border-radius: 10px;
-	padding: 6px;
-	overflow: hidden;
-	perspective: 1000px;
-	box-shadow: 0 0 0 5px #ffffff80;
-	transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Smooth hover effect */
-	margin-bottom: 20px;
+    position: relative;
+    width: 400px;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+	transition: transform 0.6s ease, box-shadow 0.6s ease;
+    will-change: transform, opacity;
 }
 
 /* Hidden Project section */
-/* Hidden Project section */
 .hidden-card {
-	display: none; /* Initially hidden completely */
-	opacity: 0;
-	transform: scaleY(0); /* Start at 0 scale */
-	max-height: 0;
-	overflow: hidden;
-	transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.5s ease; /* Smooth appearance */
+    display: none; /* Initially hidden completely */
+    opacity: 0;
+    transform: scaleY(0); /* Start at 0 scale */
+    max-height: 0;
+    overflow: hidden;
 }
 
 .show-card {
-	opacity: 1;
-	transform: scaleY(1); /* Expand to full size */
-	max-height: 420px; /* A large enough value to cover the height */
-	overflow: hidden;
+    opacity: 1;
+    transform: scaleY(1); /* Expand to full size */
+    max-height: 420px;
+    overflow: hidden;
 }
-
-
 
 .card__image {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
+	will-change: transform, opacity;
 }
 
+/* Card hover effect */
 .card:hover {
-	transform: scale(1.05);
-	box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
+/* Maintain the rotateX animation but optimize it */
 .card__content {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	padding: 20px;
-	box-sizing: border-box;
-	background-color: rgba(242, 242, 242, 0.5);
-	backdrop-filter: blur(10px);
-	border: 1px solid rgba(242, 242, 242, 0.7);
-	transform: rotateX(-90deg);
-	transform-origin: bottom;
-	transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* Optimized glassmorphism */
+    /* Slightly reduce the transparency */
+    backdrop-filter: blur(4px); /* Lowered blur */
+    -webkit-backdrop-filter: blur(4px); 
+    border: 1px solid rgba(242, 242, 242, 0.6);
+
+    /* Smooth 3D transition */
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+	transition: transform 0.6s ease, box-shadow 0.6s ease;
+    opacity: 0;
+    will-change: transform, opacity;
 }
 
 .card:hover .card__content {
-	transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
 }
 
+/* Title styling */
 .card__title {
-	margin: 0;
-	font-size: 20px;
-	color: #333;
-	font-weight: 700;
-	background-color: rgba(242, 242, 242, 0.2);
-	
+    font-size: 20px;
+    color: #1b1b1e;
+    font-weight: 700;
+	background: none;
 }
 
-.card:hover svg {
-	scale: 0;
-}
-
+/* Description styling */
 .card__description {
-	margin: 10px 0 10px;
-	font-size: 12px;
-	color: #4f4f4f;
-	line-height: 1.4;
-	background-color: rgba(242, 242, 242, 0.2);
-	
-	
-	}
-
-
-.card__button {
-	padding: 7px;
-	border-radius: 8px;
-	background: #4d4d4d;
-	border: none;
-	color: white;
-	text-decoration: none;
-	margin-top: 100px;
-	margin-left: -2px;
+	margin-top: 10px;
+    font-size: 12px;
+    color: #1b1b1e;
+    line-height: 1.4;
+	background: none;
 }
 
+/* Button styling */
+.card__button {
+    padding: 7px;
+    border-radius: 8px;
+    background: #4d4d4d;
+    border: none;
+    color: white;
+    text-decoration: none;
+}

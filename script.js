@@ -8,13 +8,22 @@ function toggleMenu() {
 }
 
 function lighttodark(button) {
+	console.log("Button clicked:", button);
 	button.style.display = "none";
-	document.querySelector(".switch").style.display = "block";
+	const switchElement = button.closest("nav").querySelector(".switch");
+    if (!switchElement) {
+        console.error("Switch not found for button:", button);
+        return;
+    }
+    switchElement.style.display = "block";
+	// document.querySelector(".switch").style.display = "block";
 
 	setTimeout(function () {
 		button.style.display = "block";
-		document.querySelector(".switch").style.display = "none";
+		// document.querySelector(".switch").style.display = "none";
+		switchElement.style.display = "none";
 
+		
 		if (button.innerText === "Light") {
 			button.innerText = "Dark";
 		} else {
@@ -23,31 +32,15 @@ function lighttodark(button) {
 	}, 900);
 }
 
-document.getElementById("l-d").addEventListener("click", function () {
-	lighttodark(this);
+document.querySelectorAll("#l-d, #l-d-footer").forEach(button => {
+    button.addEventListener("click", function () {
+        lighttodark(this);
 
-	setTimeout(function () {
-		var themeSwitcher = document.getElementById("themeSwitcher");
-		themeSwitcher.click();
-	}, 200);
-});
-
-document.getElementById("l-d-s").addEventListener("click", function () {
-	lighttodark(this);
-	setTimeout(function () {
-		var sthemeSwitcher = document.getElementById("sthemeSwitcher");
-		sthemeSwitcher.click();
-	}, 200);
-});
-
-// footer one 
-document.getElementById("l-d-f").addEventListener("click", function () {
-	lighttodark(this);
-
-	setTimeout(function () {
-		var themeSwitcher = document.getElementById("fthemeSwitcher");
-		themeSwitcher.click();
-	}, 200);
+        setTimeout(function () {
+            const themeSwitcher = button.closest("nav").querySelector("#themeSwitcher");
+            themeSwitcher.click();
+        }, 200);
+    });
 });
 
 // Show more card
